@@ -87,14 +87,12 @@ const MyMovieDetails = () => {
           <Col></Col>
           <Col lg={6}>
             <h1 className="text-danger">Dicono del Film</h1>
-            {commentData ? (
-              commentData
-                .slice(0, 12)
-                .map((commentObj, index) => (
-                  <MySingleComment key={`comment-id-${index}`} comment={commentObj.comment} rate={commentObj.rate} />
-                ))
+            {commentData && commentData.length > 0 ? (
+              commentData.map((commentObj, index) => (
+                <MySingleComment key={`comment-id-${index}`} comment={commentObj.comment} rate={commentObj.rate} />
+              ))
             ) : (
-              <p className="text-white">Non ci sono commenti per questo film</p>
+              <h5 className="text-white">Non ci sono commenti per questo film</h5>
             )}
           </Col>
         </Row>
