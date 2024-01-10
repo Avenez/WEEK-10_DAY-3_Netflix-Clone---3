@@ -16,7 +16,6 @@ const MySingleFilm = (props) => {
           navigate(`/movieDetails/${props.filmId}`);
         }}
       />
-      {/* <i class="bi bi-play-circle text-danger positionIcon"></i> */}
     </Col>
   );
 };
