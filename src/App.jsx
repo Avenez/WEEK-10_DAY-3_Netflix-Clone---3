@@ -6,6 +6,7 @@ import MyHomePage from "./components/MyHomePage";
 import { Component, useState } from "react";
 import MyProfilePage2 from "./components/MyProfilePage2";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MyMovieDetails from "./components/MyMovieDetails";
 
 // import MyFilmList from "./components/MyFilmList";
 // import MyTvShowsHeader from "./components/MyTvShowsHeader";
@@ -47,7 +48,7 @@ const App = () => {
                 <MyProfilePage2 changeProfilePicture2={changeProfilePicture} profilePicturePage={profilePicture} />
               }
             />
-            {/* <Route path="/TvShows" element={MyTvShows} /> */}
+            <Route path="/movieDetails/:filmId" element={<MyMovieDetails />} />
           </Routes>
         </main>
         {/* --------FOOTER-------- */}

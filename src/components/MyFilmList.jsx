@@ -74,7 +74,7 @@ class MyFilmList extends Component {
           <>
             <Row className=" d-none d-md-flex gx-1 gy-3 ">
               {this.state.filmData.slice(this.state.startPoint, this.state.startPoint + 6).map((film, index) => (
-                <MySingleFilm key={`film-id-${index}`} imageUrl={film.Poster} />
+                <MySingleFilm key={`film-id-${index}`} imageUrl={film.Poster} filmId={film.imdbID} />
               ))}
             </Row>
             <Row className="d-sm-flex d-md-none">
