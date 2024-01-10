@@ -28,9 +28,9 @@ const MyNavBar = (props) => {
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="me-auto mb-2 mb-lg-0">
             <Nav.Item>
-              <Nav.Link className="nav-link" onClick={props.isSettingsOnCheck ? props.profileToggle2 : null}>
+              <NavLink to="/" className="nav-link">
                 Home
-              </Nav.Link>
+              </NavLink>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link className="nav-link">TV Show</Nav.Link>
@@ -44,9 +44,9 @@ const MyNavBar = (props) => {
             <Nav.Item>
               <Nav.Link className="nav-link">My List</Nav.Link>
             </Nav.Item>
-            {/* <Link to="/" className="nav-link">
-              Home2
-            </Link> */}
+            <NavLink to="/Profile" className="nav-link">
+              Profile
+            </NavLink>
           </Nav>
 
           <MyNavMenu

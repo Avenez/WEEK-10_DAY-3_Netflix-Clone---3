@@ -26,7 +26,7 @@ class MyFilmList extends Component {
     const apiKey = "cffdda84";
 
     try {
-      const response = await fetch(`http://www.omdbapi.com/?s=${this.props.searchQuery}&apikey=${apiKey}`);
+      const response = await fetch(`http://www.omdbapi.com/?s=${this.state.searchQuery}&apikey=${apiKey}`);
 
       if (!response.ok) {
         throw new Error("Errore");
@@ -49,7 +49,7 @@ class MyFilmList extends Component {
   componentDidUpdate(prevProps) {
     if (this.props.searchQuery !== prevProps.searchQuery) {
       this.setState({ startPoint: Math.floor(Math.random() * 6) });
-      this.setState( () => {
+      this.setState({ searchQuery: this.props.searchQuery, isLoading: true }, () => {
         this.filmDataFetch();
       });
     }
